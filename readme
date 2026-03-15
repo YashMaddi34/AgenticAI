@@ -1,1 +1,8 @@
+AgenticAI — A Python-based data engineering project powered by Claude (Anthropic AI).
 
+Supports multi-source ingestion (batch, SQL, API, streaming), data transformation,
+validation, and agentic workflows orchestrated via Claude.
+
+Platforms: Databricks and Snowflake, each with their own isolated pipeline and test structure.
+
+See CLAUDE.md for full project structure and development guide.

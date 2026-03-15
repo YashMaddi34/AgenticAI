@@ -1,0 +1,21 @@
+# Environment
+.env
+.venv/
+venv/
+
+# Data (keep schemas, ignore raw/processed)
+data/raw/
+data/processed/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
