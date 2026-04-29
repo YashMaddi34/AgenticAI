@@ -1,0 +1,111 @@
+Data Engineering Knowledge Base
+
+## Kafka Pipeline Monitoring
+
+Kafka pipelines are used for real-time data ingestion. A common issue in Kafka systems is consumer lag, which occurs when consumers are unable to process messages as fast as producers send them.
+
+Common causes of Kafka lag:
+- Broker overload
+- Network latency
+- Inefficient consumer logic
+- Partition imbalance
+
+Resolution steps:
+1. Check consumer group lag using monitoring tools
+2. Scale consumers horizontally
+3. Optimize message processing logic
+4. Verify broker health and throughput
+
+---
+
+## Snowflake Data Loading
+
+Snowflake supports batch and streaming ingestion using Snowpipe and Snowpipe Streaming.
+
+Common issues:
+- File not loaded into table
+- Duplicate records
+- Schema mismatch
+
+Troubleshooting steps:
+- Verify stage location and file format
+- Check load history using INFORMATION_SCHEMA
+- Validate schema compatibility
+- Ensure proper role-based access (RBAC)
+
+---
+
+## dbt Transformations
+
+dbt (data build tool) is used for transforming data in the warehouse.
+
+Key concepts:
+- Models: SQL-based transformations
+- Tests: Data quality checks
+- Seeds: Static datasets
+- Macros: Reusable SQL logic
+
+Common dbt issues:
+- Failing tests (nulls, duplicates)
+- Incorrect joins
+- Incremental model failures
+
+---
+
+## Data Quality Checks
+
+Data quality is critical in pipelines.
+
+Types of checks:
+- Completeness: No missing values
+- Uniqueness: No duplicate records
+- Validity: Correct formats and ranges
+- Consistency: Matches across systems
+
+Example:
+A null value in a primary key column indicates a critical failure.
+
+---
+
+## Incident: Pipeline Failure Case Study
+
+Date: 2024-02-10
+
+Issue:
+Daily ETL pipeline failed due to schema mismatch.
+
+Root Cause:
+A new column was added in source system but not updated in target table.
+
+Resolution:
+- Updated schema in Snowflake
+- Modified dbt model
+- Re-ran pipeline successfully
+
+---
+
+## Spark Performance Optimization
+
+Common performance issues in Spark jobs:
+- Data skew
+- Large shuffles
+- Inefficient joins
+
+Optimization techniques:
+- Use broadcast joins for small tables
+- Repartition data properly
+- Cache intermediate results when needed
+
+---
+
+## Alerting Strategy
+
+Alerts should be configured for:
+- Pipeline failures
+- Data quality issues
+- Delayed data arrival
+
+Best practices:
+- Use severity levels (Critical, High, Medium)
+- Avoid alert fatigue by deduplication
+- Integrate with notification systems (Slack, Email)
