@@ -1,9 +1,7 @@
 from openai import OpenAI
 
 client = OpenAI(
-  base_url="https://openrouter.ai/api/v1",
-  api_key="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",
-)
+  base_url="https://openrouter.ai/api/v1"
 
 completion = client.chat.completions.create(
   extra_headers={
