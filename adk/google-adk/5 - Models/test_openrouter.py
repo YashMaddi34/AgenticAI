@@ -1,7 +1,7 @@
 from openai import OpenAI
 
 client = OpenAI(
-  base_url="https://openrouter.ai/api/v1"
+  base_url="https://openrouter.ai/api/v1")
 
 completion = client.chat.completions.create(
   extra_headers={
