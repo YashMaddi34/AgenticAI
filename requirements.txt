@@ -21,3 +21,4 @@ faiss-cpu>=1.7.0
 chromadb>=0.5.3
 pydantic>=2.0.0
 pytest>=7.0.0
+databricks-cli>=0.14.0
