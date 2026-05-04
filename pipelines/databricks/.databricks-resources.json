@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "resources": [
+    {
+      "type": "schema",
+      "name": "claudecode_integration.raw",
+      "id": "claudecode_integration.raw",
+      "created_at": "2026-05-04T07:31:30.989491+00:00",
+      "updated_at": "2026-05-04T07:31:30.989491+00:00"
+    },
+    {
+      "type": "job",
+      "name": "ingest_csv_to_delta",
+      "id": "1072556575285521",
+      "created_at": "2026-05-04T07:47:16.116365+00:00",
+      "updated_at": "2026-05-04T07:47:16.116365+00:00"
+    }
+  ]
+}
